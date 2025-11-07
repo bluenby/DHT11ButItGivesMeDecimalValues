@@ -61,6 +61,32 @@ public:
    */
   int readTemperatureHumidity(int &temperature, int &humidity);
 
+  /**
+   * Reads and returns the humidity decimal from the DHT11 sensor.
+   *
+   * @return: Humidity value in percentage. Returns DHT11_ERROR_TIMEOUT if reading times out.
+   *          Returns DHT11_ERROR_CHECKSUM if checksum validation fails.
+   */
+  int readHumidityDecimal();
+
+  /**
+   * Reads and returns the temperature decimal from the DHT11 sensor.
+   *
+   * @return: Temperature value in Celsius. Returns DHT11_ERROR_TIMEOUT if reading times out.
+   *          Returns DHT11_ERROR_CHECKSUM if checksum validation fails.
+   */
+  int readTemperatureDecimal();
+
+  /**
+   * Reads and returns the temperature and humidity decimals from the DHT11 sensor.
+   *
+   * @param temperature: Reference to a variable where the temperature value will be stored.
+   * @param humidity: Reference to a variable where the humidity value will be stored.
+   * @return: true if the reading is successful, false if it fails due to timeout or checksum error.
+   */
+  int readTemperatureHumidityDecimal(int &temperature, int &humidity);
+
+
   // Constants to represent error codes.
   static const int ERROR_CHECKSUM = 254;    // Error code indicating checksum mismatch.
   static const int ERROR_TIMEOUT = 253;     // Error code indicating a timeout occurred during reading.
