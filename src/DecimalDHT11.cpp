@@ -2,7 +2,7 @@
  * DecimalDHT11.cpp
  * Library for reading temperature and humidity from the DHT11 sensor, but with the decimal values.
  *
- * Modified Author: Ruth Spilman
+ * Modified Author: Ruth
  * Original Author: Dhruba Saha
  * Version: 2.1.0
  * License: MIT
